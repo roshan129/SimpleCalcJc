@@ -18,18 +18,21 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
-@Preview
 @Composable
 fun CalculatorMain(
+    calcText: String,
+    onCalcButtonsClicked1: (clickedText: String) -> Unit,
+    onCalcClearClicked: () -> Unit,
+    onCalcClearAllClicked: () -> Unit,
 
-) {
+    ) {
 
     Surface(
         modifier = Modifier
             .fillMaxSize()
             .padding(0.dp),
 
-    ) {
+        ) {
 
         Column(
             modifier = Modifier.padding(top = 30.dp),
@@ -37,7 +40,7 @@ fun CalculatorMain(
         ) {
 
             Text(
-                text = "12345",
+                text = calcText,
                 fontSize = 32.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.End,
@@ -47,14 +50,22 @@ fun CalculatorMain(
 
             )
 
-            CalcKeyboardLayout()
+            CalcKeyboardLayout(
+                onCalcButtonsClicked = {
+                    onCalcButtonsClicked1(it)
+                },
+                onCalcClearClicked = {
+                    onCalcClearClicked()
+                },
+                onCalcClearAllClicked = {
+                    onCalcClearAllClicked()
+                },
+            )
 
         }
 
 
     }
-
-
 
 
 }

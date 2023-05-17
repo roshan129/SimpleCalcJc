@@ -30,14 +30,14 @@ fun CalcButton(
     btnText: String,
     textColor: Color,
     btnBackgroundColor: Color,
-    onBtnClicked: () -> Unit,
+    onBtnClicked: (numberText: String) -> Unit,
     ) {
 
     Box(
         modifier = Modifier.size(75.dp)
             .background(btnBackgroundColor, RoundedCornerShape(12.dp))
             .clickable {
-                       onBtnClicked()
+                       onBtnClicked(btnText)
             }
         ,
         contentAlignment = Alignment.Center

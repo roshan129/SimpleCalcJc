@@ -17,7 +17,9 @@ import com.roshanadke.simplecalcjc.ui.theme.ButtonGreen
 
 @Composable
 fun CalcKeyboardLayout(
-
+    onCalcButtonsClicked: (clickedText: String) -> Unit,
+    onCalcClearClicked: () -> Unit,
+    onCalcClearAllClicked: () -> Unit,
 ) {
 
     Box(
@@ -51,7 +53,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcClearClicked()
                     }
                 )
 
@@ -93,7 +95,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -102,7 +104,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -111,7 +113,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -136,7 +138,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -145,7 +147,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -154,7 +156,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -179,7 +181,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -188,7 +190,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -197,7 +199,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
@@ -222,7 +224,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcClearAllClicked()
                     }
                 )
 
@@ -231,7 +233,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onCalcButtonsClicked(it)
                     }
                 )
 
