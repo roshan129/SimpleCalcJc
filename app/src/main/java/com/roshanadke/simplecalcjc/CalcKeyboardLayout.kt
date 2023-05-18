@@ -20,6 +20,10 @@ fun CalcKeyboardLayout(
     onCalcButtonsClicked: (clickedText: String) -> Unit,
     onCalcClearClicked: () -> Unit,
     onCalcClearAllClicked: () -> Unit,
+    onOperatorClicked: (operator: String) -> Unit,
+    onDecimalClicked: () -> Unit,
+    onBackClicked: () -> Unit,
+    onResultClicked: () -> Unit,
 ) {
 
     Box(
@@ -62,7 +66,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onBackClicked()
                     }
                 )
 
@@ -71,7 +75,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onOperatorClicked(it)
                     }
                 )
 
@@ -80,7 +84,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onOperatorClicked(it)
                     }
                 )
             }
@@ -122,7 +126,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onOperatorClicked(it)
                     }
                 )
             }
@@ -165,7 +169,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onOperatorClicked(it)
                     }
                 )
             }
@@ -208,7 +212,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onOperatorClicked(it)
                     }
                 )
             }
@@ -242,7 +246,7 @@ fun CalcKeyboardLayout(
                     textColor = Color.Black,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onDecimalClicked()
                     }
                 )
 
@@ -251,7 +255,7 @@ fun CalcKeyboardLayout(
                     textColor = ButtonGreen,
                     btnBackgroundColor = Color.White,
                     onBtnClicked = {
-
+                        onResultClicked()
                     }
                 )
             }

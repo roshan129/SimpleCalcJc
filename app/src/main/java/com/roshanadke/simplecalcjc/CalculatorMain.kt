@@ -24,6 +24,10 @@ fun CalculatorMain(
     onCalcButtonsClicked1: (clickedText: String) -> Unit,
     onCalcClearClicked: () -> Unit,
     onCalcClearAllClicked: () -> Unit,
+    onOperatorClicked: (operator: String) -> Unit,
+    onDecimalClicked: () -> Unit,
+    onBackClicked: () -> Unit,
+    onResultClicked: () -> Unit,
 
     ) {
 
@@ -59,6 +63,18 @@ fun CalculatorMain(
                 },
                 onCalcClearAllClicked = {
                     onCalcClearAllClicked()
+                },
+                onOperatorClicked = {
+                    onOperatorClicked(it)
+                },
+                onDecimalClicked = {
+                    onDecimalClicked()
+                },
+                onBackClicked = {
+                    onBackClicked()
+                },
+                onResultClicked = {
+                    onResultClicked()
                 },
             )
 

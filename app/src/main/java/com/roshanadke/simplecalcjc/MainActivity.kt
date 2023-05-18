@@ -44,7 +44,19 @@ class MainActivity : ComponentActivity() {
                         },
                         onCalcClearAllClicked = {
                             viewModel.clearAllCalcText()
-                        }
+                        },
+                        onOperatorClicked = {
+                            viewModel.addOperatorToCalcText(it)
+                        },
+                        onDecimalClicked = {
+                            viewModel.addDecimalToCalcText()
+                        },
+                        onBackClicked = {
+                            viewModel.deleteSingleCalcText()
+                        },
+                        onResultClicked = {
+                            viewModel.calculateOperation()
+                        },
                     )
 
                 }

@@ -14,6 +14,18 @@ class CalcViewModel : ViewModel() {
         _calcText.value = _calcText.value + newText
     }
 
+    fun addOperatorToCalcText(operator: String) {
+        _calcText.value = _calcText.value + operator
+    }
+
+    fun addDecimalToCalcText() {
+        _calcText.value = _calcText.value + "."
+    }
+
+    fun calculateOperation() {
+
+    }
+
     fun getCalcText(): String {
         return calcText.value
     }
